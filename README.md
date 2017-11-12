@@ -18,8 +18,8 @@ Repeat (for each episode): // 每一次尝试，从车子出发到撞毁是一�
 
 然后我们将Q-learning算法与深度学习结合。
 
-首先，用一个深度神经网络来作为Q值的网络，然后使用均方差(mean-square error)来定义Loss Function
-*此处放图
-最后计算参数w关于Loss Function的梯度，使用SGD随机梯度下降来更新参数，从而得到最优的Q值。
+首先，用一个深度神经网络来作为Q值的网络，地图上每个点有坐标(x1, y1)，将此状态输入神经网络来预测每个方向的Q值(图中假设有四个actions对应四个方向，所以一共得到4个新的Q值)。Q-target表示上一次到达该状态时所得到的Q值，然后使用均方差(mean-square error)来定义Loss Function。
+![cnn](https://user-images.githubusercontent.com/22739177/32696393-b821cd68-c72b-11e7-8789-cdab520b49ba.PNG)
+计算出的L值被反馈(backpropagation)以计算每个突触的权重w，重复此过程使此函数收敛(L值接近0)，就可以让无人车在此状态下做出最优选择。
 
 
