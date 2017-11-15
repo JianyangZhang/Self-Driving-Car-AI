@@ -1,5 +1,5 @@
-<p align="center"><b>建议使用PyTorch+Kivy运行脚本</b></p>
-配置环境详细教程 [点我](https://www.superdatascience.com/pytorch/)
+<p align="center"><b>建议使用PyTorch+Kivy运行脚本，配置环境详细教程 https://www.superdatascience.com/pytorch/</b></p>
+
 
 &nbsp;&nbsp;&nbsp;learning=>![learning](https://user-images.githubusercontent.com/22739177/32823936-c279686a-c993-11e7-906e-ea3e7830e275.gif)&nbsp;&nbsp;&nbsp;after a while=>
 ![after learning](https://user-images.githubusercontent.com/22739177/32823937-c2950e80-c993-11e7-9358-89e50cdaae8f.gif)
