@@ -1,5 +1,8 @@
 ***强烈建议在Ubuntu系统中使用PyTorch+Kivy运行***
 
+&nbsp;&nbsp;&nbsp;learning=>![learning](https://user-images.githubusercontent.com/22739177/32823936-c279686a-c993-11e7-906e-ea3e7830e275.gif)&nbsp;&nbsp;&nbsp;after a while=>
+![after learning](https://user-images.githubusercontent.com/22739177/32823937-c2950e80-c993-11e7-9358-89e50cdaae8f.gif)
+
 此无人车AI项目使用的Deep Q-learning算法，是DeepMind在2013年发明的深度强化学习算法，将Q-learning的思想与神经网络算法结合，也算是现代强化学习算法的源头了。研究者用这个算法在2015年让计算机学会了49种Atari游戏，并在大部分游戏中击败了人类。从适用性上来讲，我们不需要告诉AI具体的规则，只要让它不断摸索，它就能慢慢从中找到规律，完成许多之前被认为只有人类能完成的智力活动。
 
 既然是Q-learning和Deep learnng的结合，就先结合无人车AI来讨论什么是Q-learning。
