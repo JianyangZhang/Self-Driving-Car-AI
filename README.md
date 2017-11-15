@@ -20,12 +20,12 @@ Repeat (for each episode): // 每一次尝试，从车子出发到撞毁是一�
 然后我们将Q-learning算法与深度学习结合。从High Level来看，Q-learning已经实现无人车基本的躲避路障功能，而深度学习算法可以让无人车自动总结并学习特征，减少人为设定特征的不完备性，以更好的适应非常复杂的环境条件。
 
 首先，用一个深度神经网络来作为Q值的网络，地图上每个点有坐标(X1, X2)，将此状态输入神经网络来预测每个方向的Q值(图中假设有四个actions对应四个方向，所以一共得到4个新的Q值)。Q-target表示上一次到达该状态时所得到的Q值，然后使用均方差(mean-square error)来定义Loss Function。
-![cnn](https://user-images.githubusercontent.com/22739177/32696393-b821cd68-c72b-11e7-8789-cdab520b49ba.PNG)
+![learn](https://user-images.githubusercontent.com/22739177/32822235-60bfc1b6-c98c-11e7-966a-2a2c295645cc.PNG)
 计算出的L值被反馈(back-propagation)以计算每个突触(绿色圈圈)的权重w。
 
 需要注意的是，上面的过程我们称之为"学习"(learn)，尽管我们对比了以前的Q值并反馈给输入端，但是这一次计算得到的Q值是不变的。我们接下来要做的是根据这一次计算得到的Q值，做出一个"动作"(act)。
 
-[截图]
+![act](https://user-images.githubusercontent.com/22739177/32822234-60a7c57a-c98c-11e7-82b2-82d53104940a.PNG)
 决定"动作"的过程，就是将得到的Q值传入"Softmax-Function"的过程。"Softmax-Function"是一个动作选择策略，它可以帮助我们根据当前的数据做出最优选择，原理涉及到概率论，这里就注重于应用层了，代码中有详细注释，想要深入了解可以参考Wiki。
 
 那么为什么不直接选择最大的Q值所对应的action，而且用Softmax-Function来做决定？这里就涉及到几种动作选择策略。直接选择最大的Q值并不是不可以，这种就叫做贪心策略，缺点是很容易陷入局部最优解。因为如果执行了某个动作后，最终达到了目标，那么这种策略就会在后续此状态时一直选择这种动作，导致没有机会探索全局最优解。
