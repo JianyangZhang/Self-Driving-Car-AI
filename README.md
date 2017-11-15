@@ -1,4 +1,4 @@
-<p align="center"><b>建议使用PyTorch+Kivy运行脚本，配置环境详细教程 https://www.superdatascience.com/pytorch/</b></p>
+<p align="center"><b>建议使用PyTorch+Kivy运行脚本，环境配置详细教程 https://www.superdatascience.com/pytorch/</b></p>
 
 
 &nbsp;&nbsp;&nbsp;learning=>![learning](https://user-images.githubusercontent.com/22739177/32823936-c279686a-c993-11e7-906e-ea3e7830e275.gif)&nbsp;&nbsp;&nbsp;after a while=>
