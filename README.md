@@ -15,7 +15,7 @@ Initialize Q arbitrarily // 随机初始化Q值
 Repeat (for each episode): // 每一次尝试，从车子出发到撞墙是一个episode
 	Initialize S // 车辆出发，S为初始位置的状态
 	Repeat (for each step of episode):
-		Q(S,A) ← (1-α)*Q(S,A) + α*[R + γ*maxQ(S',a)] // Q-learning核心贝尔曼方程，更新动作奖励
+		Q(S,A) ← (1-α)*Q(S,A) + α*[R + γ*maxQ(S',a)] // Q-learning核心贝尔曼方程，更新动作效用值
 		S ← S' // 更新位置
 	until S is terminal // 位置到达终点
 ```
