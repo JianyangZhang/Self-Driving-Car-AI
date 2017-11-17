@@ -25,7 +25,7 @@ Repeat (for each episode): // 每一次尝试，从车子出发到撞墙是一�
 
 首先，用一个深度神经网络来作为Q值的网络，地图上每个点有坐标(X1, X2)，将此状态输入神经网络来预测每个方向的Q值(图中假设有四个actions对应四个方向，所以一共得到4个新的Q值)。Q-target表示上一次到达该状态时所得到的Q值，然后使用均方差(mean-square error)来定义Loss Function。
 ![learn](https://user-images.githubusercontent.com/22739177/32822235-60bfc1b6-c98c-11e7-966a-2a2c295645cc.PNG)
-计算出的L值被反馈(back-propagation)以计算每个突触(绿色圈圈)的权重w。
+计算出的L值被反馈(back-propagation)以计算每个突触(绿色圈圈)的权重w，使得L值可以尽量小。
 
 需要注意的是，上面的过程我们称之为"学习"(learn)，尽管我们对比了以前的Q值并反馈给输入端，但是这一次计算得到的Q值是不变的。我们接下来要做的是根据这一次计算得到的Q值，做出一个"动作"(act)。
 
